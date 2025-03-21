@@ -36,7 +36,8 @@ if __name__ == "__main__":
     parser.add_argument('filename', nargs='?', help='Optional: specific file to process')
     args = parser.parse_args()
     
-    dataset = "../EuroCup2016"
+    # Use the correct path with expanduser to handle the tilde
+    dataset = os.path.expanduser("~/datasets/EuroCup2016")
     dst_frames = os.path.join(dataset, 'frames')
     dst_pcm = os.path.join(dataset, 'pcm')
     
