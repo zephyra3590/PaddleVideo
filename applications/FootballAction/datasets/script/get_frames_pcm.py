@@ -47,6 +47,10 @@ if __name__ == "__main__":
     
     # If a filename is provided, process only that file
     if args.filename:
+        file_path = os.path.join(dataset, args.filename)
+        if not os.path.exists(file_path):
+            print(f"Error: File '{file_path}' does not exist.")
+            sys.exit(1)
         process(args.filename, dataset, dst_frames, dst_pcm)
     # Otherwise, process all files in the list as before
     else:
