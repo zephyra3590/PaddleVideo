@@ -56,7 +56,7 @@ class ActionDetection(object):
         if self.LSTM_ONLY:
             self.prop_dict = {}
             for dataset in ['EuroCup2016']:
-                prop_json = '/home/work/datasets/{}/feature_bmn/prop.json'.format(dataset)
+                prop_json = '~/datasets/{}/feature_bmn/prop.json'.format(dataset)
                 json_data = json.load(open(prop_json, 'r'))
                 for item in json_data:
                     basename = prop_json.replace('feature_bmn/prop.json', 'mp4')
