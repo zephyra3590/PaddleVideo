@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser.add_argument('filename', nargs='?', default=None, help='Optional: specific file to process')
     args = parser.parse_args()
     
-    dataset_dir = "/workspace/PaddleVideo/applications/FootballAction/datasets/EuroCup2016"
+    dataset_dir = "../datasets/EuroCup2016"
     
     model_predict = ActionDetection(cfg_file="./configs/configs.yaml")
     model_predict.load_model()
